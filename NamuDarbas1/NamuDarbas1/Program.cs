@@ -11,6 +11,8 @@ namespace NamuDarbas1
 
             Console.WriteLine(IsItdigit(skaicius));
             IsNumberInRange(skaicius);
+            
+            Console.WriteLine(ChangeNumberToString(Convert.ToInt32(skaicius)));
         }
 
         static bool IsItdigit(string a)
@@ -55,22 +57,21 @@ namespace NamuDarbas1
         static string ChangeNumberToString(int skaicius)
         {
             bool isNegative = false;
+            string minus = "";
             if (skaicius < 0)
             {
                 skaicius = skaicius * -1;
                 isNegative = true;
+                minus = "minus ";
             }
             switch (skaicius)
             {
                 case 1:
-                    return "Vienas";
-                    break;
+                    return minus + "vienas";                    
                 case 2:
-                    return "Du";
-                    break;
+                    return minus + "du";                    
                 default:
-                    return "Įvestas netinkamas skaičius!";
-                    break;
+                    return "Įvestas netinkamas skaičius!";                    
             }
         }
     }
