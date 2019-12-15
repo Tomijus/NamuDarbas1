@@ -51,5 +51,27 @@ namespace NamuDarbas1
             }
 
         }
+
+        static string ChangeNumberToString(int skaicius)
+        {
+            bool isNegative = false;
+            if (skaicius < 0)
+            {
+                skaicius = skaicius * -1;
+                isNegative = true;
+            }
+            switch (skaicius)
+            {
+                case 1:
+                    return "Vienas";
+                    break;
+                case 2:
+                    return "Du";
+                    break;
+                default:
+                    return "Įvestas netinkamas skaičius!";
+                    break;
+            }
+        }
     }
 }
